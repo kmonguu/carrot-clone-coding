@@ -25,7 +25,7 @@ export default async function middleware(request: NextRequest) {
   //로그인 상태에서는 인증 페이지를 갈 수 없어야한다.
   else {
     if (exist) {
-      return NextResponse.redirect(new URL("/menu", request.url));
+      return NextResponse.redirect(new URL("/home", request.url));
     }
   }
 }
