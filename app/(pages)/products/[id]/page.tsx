@@ -29,7 +29,6 @@ export async function getProducts(id: number) {
       },
     },
   });
-  console.log(product);
   return product;
 }
 
@@ -51,7 +50,6 @@ export default async function ProductDetail({
   }
 
   const uploadUser = await getUploadUser(product.userId);
-  console.log(uploadUser);
 
   return (
     <div className=" flex flex-col p-5 gap-5 ">
