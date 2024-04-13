@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import ProductListItem from "./item";
-import { getMoreProducts } from "@/app/(pages)/(tabs)/products/action";
-import { InitialProducts } from "@/app/(pages)/(tabs)/products/page";
+import { getMoreProducts } from "@/app/(pages)/(tabs)/home/action";
+import { InitialProducts } from "@/app/(pages)/(tabs)/home/page";
 
 interface ProductListProps {
   initialProducts: InitialProducts;
