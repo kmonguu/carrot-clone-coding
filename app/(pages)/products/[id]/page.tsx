@@ -82,7 +82,7 @@ export default async function ProductDetail({
         <h1 className="text-2xl font-semibold">{product.title}</h1>
         <p>{product.description}</p>
       </div>
-      <div className="flex justify-between items-center fixed w-full bottom-20 left-0 p-5 pb-5 bg-neutral-700">
+      <div className="flex justify-between items-center fixed w-full bottom-0 left-0 p-5 pb-5 bg-neutral-700">
         <span className=" font-semibold text-lg">
           {priceKRFormatter(product.price)}원
         </span>

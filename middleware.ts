@@ -6,10 +6,11 @@ interface Routes {
 }
 
 const publicUrl: Routes = {
-  "/": true,
+  "/auth": true,
   "/auth/create-account": true,
   "/auth/login": true,
   "/auth/sms": true,
+  "/home": true,
 };
 
 export default async function middleware(request: NextRequest) {
@@ -19,7 +20,7 @@ export default async function middleware(request: NextRequest) {
 
   if (!session.id) {
     if (!exist) {
-      return NextResponse.redirect(new URL("/", request.url));
+      return NextResponse.redirect(new URL("/auth", request.url));
     }
   }
   //로그인 상태에서는 인증 페이지를 갈 수 없어야한다.

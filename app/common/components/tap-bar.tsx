@@ -23,7 +23,7 @@ export default function TabBar() {
   return (
     <div className="fixed bottom-0 w-full mx-auth max-w-screen-md grid grid-cols-5 border-neutral-500 border-t px-5 py-3 bg-neutral-800">
       <Link href="/products" className="flex flex-col items-center gap-px">
-        {pathName === "/products" ? (
+        {pathName === "/home" ? (
           <HomeIcon_solid className="size-7" />
         ) : (
           <HomeIcon_outline className="size-7" />

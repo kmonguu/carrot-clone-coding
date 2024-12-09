@@ -1,6 +1,11 @@
 "use server";
 
 import db from "@/app/libs/db";
+import { unstable_cache } from "next/cache";
+
+export const getCachedProducts = unstable_cache(getInitialProducts, [
+  "initialProduct",
+]);
 
 export async function getInitialProducts() {
   const products = await db.product.findMany({
@@ -15,7 +20,6 @@ export async function getInitialProducts() {
     orderBy: {
       create_at: "desc",
     },
-    take: 1,
   });
   return products;
 }
